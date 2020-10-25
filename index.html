@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend Task 1</title>
     <style>
-        input {
+        body {
             margin: 10px;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #eeeeef;
+        }
+        input {
             margin-bottom: 0;
         }
 
@@ -23,6 +28,7 @@
 <body>
     <input type="text">
     <input type="submit" id="btn">
+    <h2>Check if Palindrome</h2>
     <div id="output"></div>
     <script src="app.js"></script>
     <script>
@@ -30,7 +36,12 @@
         const input = document.querySelector('input');
         const btn = document.querySelector('#btn'); 
         
-        btn.addEventListener('click', palindrome(input.value))
+        btn.addEventListener('click', () => {
+            palindrome(input.value);
+            output.innerHTML += `<h3>${input.value} = ${palindrome(input.value)}</h3>`;
+        }
+            )
+        btn.addEventListener('click', () => setTimeout(() => input.value= "", 2000))
     </script>
 </body>
 
