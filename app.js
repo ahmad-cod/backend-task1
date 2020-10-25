@@ -9,6 +9,7 @@ function palindrome(str) {
     return true
 }
 
+module.exports.palindrome = palindrome;
 console.log("ada", palindrome("ada"));
 console.log("dada", palindrome("dada"));
 console.log("madam", palindrome("madam"));
